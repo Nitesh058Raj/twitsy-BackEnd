@@ -5,6 +5,7 @@ import cors from 'cors';
 
 import Response from "./domain/response.js";
 import logger from "./util/logger.js";
+import HttpStatus from "../domain/httpStatus.js";
 
 dotenv.config();
 
@@ -18,7 +19,7 @@ app.use(cors({origin: '*'}));
 app.use(express.json());
 
 app.get('/', (req,res) => {
-    res.send(new Response(200, 'OK', 'Message: v1.0.0'));
+    res.send(new Response(HttpStatus.OK.code, HttpStatus.OK.status, 'Message: v1.0.0'));
 });
 // process.env --> ansible facts (works link)
 app.listen(PORT, () => logger.info(`Server is running on : ${ip.address()} : ${PORT}`));
