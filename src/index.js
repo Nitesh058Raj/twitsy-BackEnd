@@ -3,7 +3,7 @@ import ip from 'ip';
 import dotenv from 'dotenv';
 import cors from 'cors';
 
-import Response from "./domain/response";
+import Response from "./domain/response.js";
 
 dotenv.config();
 
