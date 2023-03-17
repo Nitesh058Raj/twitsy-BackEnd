@@ -12,6 +12,7 @@ const app = express();
 
 //adding middleware for cors
 app.use(cors({origin: '*'}));
+app.use(express.json());
 
 app.get('/', (req,res) => {
     res.send({message : 'UP'});
