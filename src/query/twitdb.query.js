@@ -11,7 +11,7 @@ const QUERY = {
         SELECT_ALL: "SELECT * FROM Twits",
         SELECT: "SELECT * FROM Twits WHERE twit_id = ?",
         CREATE: "INSERT INTO Twits(user_id, title, description) VALUES(?,?,?)",
-        UPDATE: "UPDATE Twits SET name = ?, email = ?",
+        UPDATE: "UPDATE Twits SET title = ?, description = ?",
         DELETE: "DELETE FROM Twits WHERE twit_id = ?"
     },
     COMMENT: {
