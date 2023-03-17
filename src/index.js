@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import Response from "./domain/response.js";
+import logger from "./util/logger.js";
 
 dotenv.config();
 
@@ -20,4 +21,4 @@ app.get('/', (req,res) => {
     res.send(new Response(200, 'OK', 'Message: v1.0.0'));
 });
 // process.env --> ansible facts (works link)
-app.listen(PORT, () => console.log(`Server is running on : ${ip.address()} : ${PORT}`));
+app.listen(PORT, () => logger.info(`Server is running on : ${ip.address()} : ${PORT}`));
