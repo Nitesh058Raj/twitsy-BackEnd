@@ -13,9 +13,9 @@ services:
     expose:
       - 3306
     environment:
-      - MYSQL_DATABASE: twitdb
-      - MYSQL_USER: admin
-      - MYSQL_PASSWORD: abc
-      - MYSQL_ROOT_PASSWORD: abc
-      - SERVICE_TAGES: prod
-      - SERVICE_NAME: mysqldb
+      MYSQL_DATABASE: twitdb
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: abc
+      MYSQL_ROOT_PASSWORD: abc
+      SERVICE_TAGES: prod
+      SERVICE_NAME: mysqldb
