@@ -1,6 +1,6 @@
 import express from 'express';
 import {getTwits, createTwit, getTwit} from '../controller/twit.controller.js';
-
+import {createUser} from '../controller/'
 const Router = express.Router();
 
 Router.route('/twit')
@@ -9,5 +9,8 @@ Router.route('/twit')
 
 Router.route('/twit/:id')
     .get(getTwit);
+
+Router.route('/user')
+    .post(createUser);
 
 export default Router;
