@@ -20,7 +20,7 @@ export const getTwits = (req,res) => {
 
 export const getTwit = (req,res) => {
     logger.info(`${req.method}:${req.originalUrl}, Getting the twit...`);
-    database.query(QUERY.TWIT.SELECT, /*[req.id] ,*/ (error, results) => {
+    database.query(QUERY.TWIT.SELECT, [req.params.id] , (error, results) => {
         if(!results){
             res.status(HttpStatus.OK.code).send(new Response(HttpStatus.OK.code, HttpStatus.OK.status, 'No twit found'));
         }
