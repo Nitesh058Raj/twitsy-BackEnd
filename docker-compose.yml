@@ -40,7 +40,7 @@ services:
       DB_CONNECTION_LIMIT: 10
       SERVICE_TAGS: prod
       SERVICE_NAME: nodeappservice
-      SERVER_PORT: 3000
+      SERVER_PORT: 5000
     depends_on:
       - mysqldb
     networks:
