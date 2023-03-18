@@ -1,6 +1,6 @@
 import express from 'express';
 import {getTwits, createTwit, getTwit} from '../controller/twit.controller.js';
-import {createUser} from '../controller/'
+import {createUser} from '../controller/user.controller'
 const Router = express.Router();
 
 Router.route('/twit')
